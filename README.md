@@ -27,6 +27,16 @@ The passwords of following entries are leaked:
 
 Please use https://github.com/jugmac00/hibpcli
 
+## release history
+
+### 0.0.2 (22.01.2019)
+
+- add dependencies to pyproject.toml
+
+### 0.0.1 (22.01.2019)
+
+- initial release
+
 ## thank you
 - click - https://click.palletsprojects.com
 - pykeepass - https://github.com/pschmitt/pykeepass

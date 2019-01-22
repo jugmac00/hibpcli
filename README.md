@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/jugmac00/hibpcli.svg?branch=master)](https://travis-ci.org/jugmac00/hibpcli)
+[![Current version on PyPI](https://img.shields.io/pypi/v/hibpcli.svg)](https://pypi.org/project/hibpcli/)
+![](https://img.shields.io/pypi/l/hibpcli.svg)
 
 # hibpcli
 

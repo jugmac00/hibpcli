@@ -1,0 +1,14 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "hibpcli"
+author = "Jürgen Gmach"
+author-email = "juergen.gmach@goglemail.com"
+home-page = "https://github.com/jugmac00/hibpcli"
+description-file = "README.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    ]

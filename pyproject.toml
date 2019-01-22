@@ -7,6 +7,11 @@ module = "hibpcli"
 author = "Jürgen Gmach"
 author-email = "juergen.gmach@goglemail.com"
 home-page = "https://github.com/jugmac00/hibpcli"
+requires = [
+    "click ==7.0",
+    "pykeepass == 3.0.2",
+    "requests == 2.21.0",
+]
 description-file = "README.md"
 classifiers = [
     "License :: OSI Approved :: MIT License",

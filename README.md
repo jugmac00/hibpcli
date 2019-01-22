@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jugmac00/hibpcli.svg?branch=master)](https://travis-ci.org/jugmac00/hibpcli)
+
 # hibpcli
 
 A command line interface for the "haveibeenpwned.com" API - talks keepass.

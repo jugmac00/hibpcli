@@ -12,6 +12,7 @@ requires = [
     "pykeepass == 3.0.2",
     "requests == 2.21.0",
 ]
+requires-python = ">=3.6"
 description-file = "README.md"
 classifiers = [
     "License :: OSI Approved :: MIT License",

@@ -16,7 +16,7 @@ Very alpha.
 $ python -m hibpcli.cli
 
 Please enter the path to the database: tests/test.kdbx
-Please enter the master password for the database: test
+Please enter the master password for the database:
 The passwords of following entries are leaked:
 [b'Entry: "test_title (test_user)"']
 ```

@@ -33,6 +33,10 @@ Please use https://github.com/jugmac00/hibpcli
 
 ## release history
 
+### unreleased
+
+- do not show password when being entered
+
 ### 0.0.2 (22.01.2019)
 
 - add dependencies to pyproject.toml

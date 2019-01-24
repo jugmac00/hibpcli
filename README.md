@@ -4,7 +4,7 @@
 
 # hibpcli
 
-A command line interface for the "haveibeenpwned.com" API - talks keepass.
+A command line interface for the "haveibeenpwned.com" API - speaks keepass.
 
 ## current state
 

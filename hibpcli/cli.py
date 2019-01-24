@@ -5,7 +5,7 @@ from hibpcli.keepass import check_passwords_from_db
 
 @click.command()
 def main():
-    path = click.prompt("Please enter the path to the database")
+    path = click.prompt("Please enter the path to the database", type=click.Path(exists=True))
     master_password = click.prompt("Please enter the master password for the database", hide_input=True)
     # needs error handling
     rv = check_passwords_from_db(path=path, master_password=master_password)

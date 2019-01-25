@@ -31,6 +31,18 @@ The passwords of following entries are leaked:
 
 Please use https://github.com/jugmac00/hibpcli
 
+## run tests
+
+```
+pytest
+```
+
+## run tests with coverage
+
+```
+pytest --cov=hibpcli --cov-report term-missing
+```
+
 ## thank you
 - click - https://click.palletsprojects.com
 - pykeepass - https://github.com/pschmitt/pykeepass

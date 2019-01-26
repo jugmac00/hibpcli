@@ -40,7 +40,7 @@ pytest
 ## run tests with coverage
 
 ```
-pytest --cov=hibpcli --cov-report term-missing
+pytest --cov=hibpcli --cov=tests --cov-report term-missing
 ```
 
 ## thank you

@@ -4,7 +4,9 @@ from mock import patch
 from hibpcli.cli import main
 
 
-def test_keepass_subcommand_returns_leaked_entry():
+@patch("hibpcli.cli.check_passwords_from_db")
+def test_keepass_subcommand_returns_leaked_entry(mock_check):
+    mock_check.return_value = [b'Entry: "test_title (test_user)"']
     runner = CliRunner()
     result = runner.invoke(main, ["keepass"], input="\n".join(["tests/test.kdbx", "test"]))
     expected_output = """Please enter the path to the database: tests/test.kdbx

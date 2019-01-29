@@ -2,6 +2,10 @@
 
 ## unreleased
 
+- nothing yet
+
+## 0.0.3 (29.01.2019)
+
 ### added
 
 - add a separate file for changes

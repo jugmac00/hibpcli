@@ -1,6 +1,6 @@
 from pykeepass import PyKeePass
 
-from hibpcli import password
+from hibpcli.password import Password
 
 
 def check_passwords_from_db(path, master_password):
@@ -9,7 +9,7 @@ def check_passwords_from_db(path, master_password):
 
     leaked_entries = []
     for entry in kp.entries:
-        p = password.Password(password=entry.password)
+        p = Password(password=entry.password)
         if p.is_leaked():
             leaked_entries.append(entry)
         

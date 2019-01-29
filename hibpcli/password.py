@@ -6,7 +6,7 @@ class Password:
     def __init__(self, password):
         self.password = password
 
-    def is_password_leaked(self):
+    def is_leaked(self):
         hex_digest = self._generate_hash()
         first_hash_part, second_hash_part = hex_digest[:5], hex_digest[5:]
         result = requests.get(f"https://api.pwnedpasswords.com/range/{first_hash_part}").text

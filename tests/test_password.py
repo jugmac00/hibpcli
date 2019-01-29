@@ -14,8 +14,8 @@ def test_password_signature():
 
 
 @patch("hibpcli.password.requests.get")
-def test_password_is_password_leaked(mock_get):
+def test_is_leaked_password(mock_get):
     mock_get.return_value.text = RESPONSE_TEXT
     p = Password("test")
-    assert p.is_password_leaked() is True
+    assert p.is_leaked() is True
     mock_get.assert_called_with("https://api.pwnedpasswords.com/range/A94A8")

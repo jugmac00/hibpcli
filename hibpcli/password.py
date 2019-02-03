@@ -9,7 +9,9 @@ class Password:
     def is_leaked(self):
         hex_digest = self._generate_hash()
         first_hash_part, second_hash_part = hex_digest[:5], hex_digest[5:]
-        result = requests.get(f"https://api.pwnedpasswords.com/range/{first_hash_part}").text
+        result = requests.get(
+            f"https://api.pwnedpasswords.com/range/{first_hash_part}"
+        ).text
         # the result is text with entries split by new line
         # one entry consists of the rest of the hash and count of
         # leak, separated by a colon

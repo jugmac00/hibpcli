@@ -12,5 +12,5 @@ def check_passwords_from_db(path, master_password):
         p = Password(password=entry.password)
         if p.is_leaked():
             leaked_entries.append(entry)
-        
+
     return leaked_entries

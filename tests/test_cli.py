@@ -8,7 +8,9 @@ from hibpcli.cli import main
 def test_keepass_subcommand_returns_leaked_entry(mock_check):
     mock_check.return_value = [b'Entry: "test_title (test_user)"']
     runner = CliRunner()
-    result = runner.invoke(main, ["keepass"], input="\n".join(["tests/test.kdbx", "test"]))
+    result = runner.invoke(
+        main, ["keepass"], input="\n".join(["tests/test.kdbx", "test"])
+    )
     expected_output = """Please enter the path to the database: tests/test.kdbx
 Please enter the master password for the database: 
 The passwords of following entries are leaked:
@@ -21,7 +23,9 @@ The passwords of following entries are leaked:
 def test_keepass_subcommand_returns_all_ok(mock_check):
     mock_check.return_value = list()
     runner = CliRunner()
-    result = runner.invoke(main, ["keepass"], input="\n".join(["tests/test.kdbx", "test"]))
+    result = runner.invoke(
+        main, ["keepass"], input="\n".join(["tests/test.kdbx", "test"])
+    )
     expected_output = """Please enter the path to the database: tests/test.kdbx
 Please enter the master password for the database: 
 Hooray, everything is safe!

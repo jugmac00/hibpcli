@@ -2,7 +2,7 @@
 
 ## unreleased
 
-- nothing yet
+- use "black" code formatter
 
 ## 0.0.3 (29.01.2019)
 

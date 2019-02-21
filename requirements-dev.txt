@@ -23,7 +23,6 @@ mock==2.0.0
 more-itertools==6.0.0
 pbr==5.1.2
 pdbpp==0.9.6
-pkg-resources==0.0.0
 pluggy==0.8.1
 py==1.7.0
 pycparser==2.19

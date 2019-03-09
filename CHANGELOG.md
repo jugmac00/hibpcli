@@ -3,6 +3,7 @@
 ## unreleased
 
 - use "black" code formatter
+- update dependencies
 
 ## 0.0.3 (29.01.2019)
 

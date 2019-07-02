@@ -4,6 +4,8 @@
 
 - use "black" code formatter
 - update dependencies
+- add support for Python 3.7
+- add support for Python 3.8-dev
 
 ## 0.0.3 (29.01.2019)
 

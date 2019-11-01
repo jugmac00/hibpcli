@@ -8,6 +8,7 @@
 - add support for Python 3.8
 - remove requirements-dev.txt
 - put test requirements in pyproject.toml
+- create a "hibpcli" script
 
 ## 0.0.3 (29.01.2019)
 

@@ -14,7 +14,7 @@ Very alpha.
 ## usage
 
 ```
-$ python -m hibpcli.cli keepass
+$ hibpcli keepass
 
 Please enter the path to the database: tests/test.kdbx
 Please enter the master password for the database:

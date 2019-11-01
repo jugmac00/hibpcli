@@ -5,7 +5,9 @@
 - use "black" code formatter
 - update dependencies
 - add support for Python 3.7
-- add support for Python 3.8-dev
+- add support for Python 3.8
+- remove requirements-dev.txt
+- put test requirements in pyproject.toml
 
 ## 0.0.3 (29.01.2019)
 

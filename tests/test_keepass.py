@@ -1,4 +1,4 @@
-from mock import patch
+from unittest.mock import patch
 
 from hibpcli.keepass import check_passwords_from_db
 

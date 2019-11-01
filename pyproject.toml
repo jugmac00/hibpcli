@@ -18,3 +18,9 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
     ]
+
+[tool.flit.metadata.requires-extra]
+test = [
+    "pytest >=5.2.2",
+    "pytest-cov",
+]

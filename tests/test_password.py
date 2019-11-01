@@ -13,7 +13,7 @@ def test_password_signature():
         Password()  # pylint: disable=E1120
 
 
-@patch("hibpcli.password.requests.get")
+@patch("hibpcli.password.httpx.get")
 def test_is_leaked_password(mock_get):
     mock_get.return_value.text = RESPONSE_TEXT
     p = Password("test")

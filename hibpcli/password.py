@@ -1,5 +1,5 @@
 import hashlib
-import requests
+import httpx
 
 
 class Password:
@@ -9,7 +9,7 @@ class Password:
     def is_leaked(self):
         hex_digest = self._generate_hash()
         first_hash_part, second_hash_part = hex_digest[:5], hex_digest[5:]
-        result = requests.get(
+        result = httpx.get(
             f"https://api.pwnedpasswords.com/range/{first_hash_part}"
         ).text
         # the result is text with entries split by new line

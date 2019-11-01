@@ -10,7 +10,7 @@ home-page = "https://github.com/jugmac00/hibpcli"
 requires = [
     "click ==7.0",
     "pykeepass == 3.0.3",
-    "requests == 2.21.0",
+    "httpx == 0.7.5",
 ]
 requires-python = ">=3.6"
 description-file = "README.md"

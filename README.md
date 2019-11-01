@@ -47,4 +47,4 @@ pytest --cov=hibpcli --cov=tests --cov-report term-missing
 ## thank you
 - click - https://click.palletsprojects.com
 - pykeepass - https://github.com/pschmitt/pykeepass
-- requests - https://github.com/requests/requests
+- httpx - https://github.com/encode/httpx

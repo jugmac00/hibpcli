@@ -2,13 +2,20 @@
 
 ## unreleased
 
-- use "black" code formatter
-- update dependencies
+## 0.1.0 (01.11.2019)
+
+### added
+
 - add support for Python 3.7
 - add support for Python 3.8
+- create a "hibpcli" script
+
+### changed
+
+- use "black" code formatter
+- update dependencies
 - remove requirements-dev.txt
 - put test requirements in pyproject.toml
-- create a "hibpcli" script
 
 ## 0.0.3 (29.01.2019)
 

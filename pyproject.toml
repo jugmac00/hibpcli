@@ -24,6 +24,9 @@ test = [
     "pytest >=5.2.2",
     "pytest-cov",
 ]
+dev = [
+    "pdbpp",
+]
 
 [tool.flit.scripts]
 hibpcli = "hibpcli.cli:main"

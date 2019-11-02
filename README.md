@@ -29,9 +29,8 @@ Please change your password!
 
 ## scope
 
-- check passwords in db via hibp online API (currently)
-- check passwords in db via offline check (future)
-- enter passwords manually (currently)
+- check all passwords in a keepass db via hibp online API
+- check a single password
 
 ## contributions, feature requests, bug reports
 

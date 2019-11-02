@@ -50,3 +50,17 @@ def test_keepass_subcommand_with_path_option(mock_check):
         [b'Entry: "test_title (test_user)"']
     """
     assert result.output == textwrap.dedent(expected_output)
+
+
+@patch("hibpcli.cli.check_passwords_from_db")
+def test_keepass_subcommand_with_path_and_password_options(mock_check):
+    mock_check.return_value = [b'Entry: "test_title (test_user)"']
+    runner = CliRunner()
+    result = runner.invoke(
+        main, ["keepass", "--path", "tests/test.kdbx", "--password", "test"]
+    )
+    expected_output = """\
+        The passwords of following entries are leaked:
+        [b'Entry: "test_title (test_user)"']
+    """
+    assert result.output == textwrap.dedent(expected_output)

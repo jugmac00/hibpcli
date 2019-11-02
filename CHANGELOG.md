@@ -4,6 +4,7 @@
 
 - update dependencies
 - add path option to keepass subcommand
+- add password option to keepass subcommand
 
 ## 0.1.0 (01.11.2019)
 

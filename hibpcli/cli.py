@@ -11,17 +11,19 @@ def main():
 
 @click.command()
 @click.option('--path', default=None, help='Path to KeePass database.')
-def keepass(path):
+@click.option('--password', default=None, help='Password to the KeePass database.')
+def keepass(path, password):
     """Check all passwords stored in the keepass database."""
     if path is None:
         path = click.prompt(
             "Please enter the path to the database", type=click.Path(exists=True)
         )
-    master_password = click.prompt(
-        "Please enter the master password for the database", hide_input=True
-    )
+    if password is None:
+         password = click.prompt(
+            "Please enter the master password for the database", hide_input=True
+        )
     # needs error handling
-    rv = check_passwords_from_db(path=path, master_password=master_password)
+    rv = check_passwords_from_db(path=path, master_password=password)
     if rv:
         click.echo("The passwords of following entries are leaked:")
         click.echo(rv)

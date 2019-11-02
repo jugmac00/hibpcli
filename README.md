@@ -22,6 +22,16 @@ The passwords of following entries are leaked:
 [Entry: "test_title (test_user)"]
 ```
 
+or
+
+```
+$ hibpcli keepass --path PATHTOKEEPASSDB
+
+Please enter the master password for the database:
+The passwords of following entries are leaked:
+[Entry: "test_title (test_user)"]
+```
+
 ## scope
 
 - check passwords in db via hibp online API (currently)

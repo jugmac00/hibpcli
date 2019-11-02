@@ -2,6 +2,8 @@
 
 ## unreleased
 
+- add new subcommand "password" for checking a single password
+
 ## 0.2.0 (02.11.2019)
 
 ### added

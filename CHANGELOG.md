@@ -2,6 +2,8 @@
 
 ## unreleased
 
+- update dependencies
+
 ## 0.1.0 (01.11.2019)
 
 ### added

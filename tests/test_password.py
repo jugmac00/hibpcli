@@ -1,7 +1,9 @@
 import pytest
+import socket
 
 from unittest.mock import patch
 
+from hibpcli.exceptions import ApiError
 from hibpcli.password import Password
 
 # this is just a small part of a real response
@@ -19,3 +21,11 @@ def test_is_leaked_password(mock_get):
     p = Password("test")
     assert p.is_leaked() is True
     mock_get.assert_called_with("https://api.pwnedpasswords.com/range/A94A8")
+
+
+@patch("hibpcli.password.httpx.get")
+def test_is_leaked_raises_api_error(mock_get):
+    mock_get.side_effect = socket.gaierror
+    p = Password("test")
+    with pytest.raises(ApiError):
+        p.is_leaked()

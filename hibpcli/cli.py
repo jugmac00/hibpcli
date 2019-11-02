@@ -1,5 +1,6 @@
 import click
 
+from hibpcli.exceptions import ApiError
 from hibpcli.keepass import check_passwords_from_db
 from hibpcli.password import Password
 
@@ -23,29 +24,36 @@ def keepass(path, password):
          password = click.prompt(
             "Please enter the master password for the database", hide_input=True
         )
-    # needs error handling
-    rv = check_passwords_from_db(path=path, master_password=password)
-    if rv:
-        click.echo("The passwords of following entries are leaked:")
-        click.echo(rv)
+    try:
+        rv = check_passwords_from_db(path=path, master_password=password)
+    except ApiError as e:
+        click.echo(str(e))
     else:
-        click.echo("Hooray, everything is safe!")
+        if rv:
+            click.echo("The passwords of following entries are leaked:")
+            click.echo(rv)
+        else:
+            click.echo("Hooray, everything is safe!")
 
 
 @click.command()
 @click.option('--password', default=None, help='Password which should be checked.')
 def password(password):
     """Check a single password."""
-    #breakpoint()
     if password is None:
          password = click.prompt(
             "Please enter a password which should be checked", hide_input=True
         )
     p = Password(password)
-    if p.is_leaked():
-        click.echo("Please change your password!")
+    try:
+        is_leaked = p.is_leaked()
+    except ApiError as e:
+        click.echo(str(e))
     else:
-        click.echo("Your password is safe!")
+        if is_leaked:
+            click.echo("Please change your password!")
+        else:
+            click.echo("Your password is safe!")
 
 main.add_command(keepass)
 main.add_command(password)

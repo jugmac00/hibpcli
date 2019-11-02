@@ -2,9 +2,16 @@
 
 ## unreleased
 
-- update dependencies
+## 0.2.0 (02.11.2019)
+
+### added
+
 - add path option to keepass subcommand
 - add password option to keepass subcommand
+
+### changed
+
+- update dependencies
 
 ## 0.1.0 (01.11.2019)
 

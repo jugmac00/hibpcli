@@ -1,6 +1,7 @@
 import click
 
 from hibpcli.keepass import check_passwords_from_db
+from hibpcli.password import Password
 
 
 @click.group()
@@ -31,7 +32,23 @@ def keepass(path, password):
         click.echo("Hooray, everything is safe!")
 
 
+@click.command()
+@click.option('--password', default=None, help='Password which should be checked.')
+def password(password):
+    """Check a single password."""
+    #breakpoint()
+    if password is None:
+         password = click.prompt(
+            "Please enter a password which should be checked", hide_input=True
+        )
+    p = Password(password)
+    if p.is_leaked():
+        click.echo("Please change your password!")
+    else:
+        click.echo("Your password is safe!")
+
 main.add_command(keepass)
+main.add_command(password)
 
 
 if __name__ == "__main__":

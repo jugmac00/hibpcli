@@ -4,6 +4,7 @@ from click.testing import CliRunner
 from unittest.mock import patch
 
 from hibpcli.cli import main
+from hibpcli.password import Password
 
 
 @patch("hibpcli.cli.check_passwords_from_db")
@@ -62,5 +63,38 @@ def test_keepass_subcommand_with_path_and_password_options(mock_check):
     expected_output = """\
         The passwords of following entries are leaked:
         [b'Entry: "test_title (test_user)"']
+    """
+    assert result.output == textwrap.dedent(expected_output)
+
+
+@patch.object(Password, "is_leaked", return_value=True)
+def test_password_subcommand_for_leaked_password(mock_password):
+    runner = CliRunner()
+    result = runner.invoke(
+        main, ["password", "--password", "test"]
+    )
+    expected_output = "Please change your password!\n"
+    assert result.output == expected_output
+
+
+@patch.object(Password, "is_leaked", return_value=False)
+def test_password_subcommand_for_safe_password(mock_password):
+    runner = CliRunner()
+    result = runner.invoke(
+        main, ["password", "--password", "test"]
+    )
+    expected_output = "Your password is safe!\n"
+    assert result.output == expected_output
+
+
+@patch.object(Password, "is_leaked", return_value=False)
+def test_password_subcommand_with_prompt(mock_password):
+    runner = CliRunner()
+    result = runner.invoke(
+        main, ["password"], input="test"
+    )
+    expected_output = """\
+        Please enter a password which should be checked: 
+        Your password is safe!
     """
     assert result.output == textwrap.dedent(expected_output)

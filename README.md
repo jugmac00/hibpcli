@@ -9,20 +9,9 @@ A command line interface for the "haveibeenpwned.com" API - speaks keepass.
 
 ## current state
 
-Very alpha.
+A little bit alpha.
 
 ## usage
-
-```
-$ hibpcli keepass
-
-Please enter the path to the database: tests/test.kdbx
-Please enter the master password for the database:
-The passwords of following entries are leaked:
-[Entry: "test_title (test_user)"]
-```
-
-or
 
 ```
 $ hibpcli keepass --path PATHTOKEEPASSDB --password PASSWORDFORKEEPASSDB
@@ -31,11 +20,18 @@ The passwords of following entries are leaked:
 [Entry: "test_title (test_user)"]
 ```
 
+```
+$ hibpcli password --password test
+
+Please change your password!
+```
+
+
 ## scope
 
 - check passwords in db via hibp online API (currently)
 - check passwords in db via offline check (future)
-- enter passwords manually (future)
+- enter passwords manually (currently)
 
 ## contributions, feature requests, bug reports
 

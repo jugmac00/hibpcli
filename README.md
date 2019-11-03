@@ -34,7 +34,7 @@ Please change your password!
 
 ## contributions, feature requests, bug reports
 
-Please use https://github.com/jugmac00/hibpcli
+Please use https://github.com/jugmac00/hibpcli/issues
 
 ## run tests
 

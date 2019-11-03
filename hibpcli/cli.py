@@ -13,16 +13,19 @@ def main():
 
 @click.command()
 @click.option('--path', default=None, help='Path to KeePass database.')
-@click.option('--password', default=None, help='Password to the KeePass database.')
+@click.option(
+    '--password', default=None, help='Password for the KeePass database.')
 def keepass(path, password):
     """Check all passwords stored in the keepass database."""
     if path is None:
         path = click.prompt(
-            "Please enter the path to the database", type=click.Path(exists=True)
+            "Please enter the path to the database",
+            type=click.Path(exists=True)
         )
     if password is None:
-         password = click.prompt(
-            "Please enter the master password for the database", hide_input=True
+        password = click.prompt(
+            "Please enter the master password for the database",
+            hide_input=True
         )
     try:
         rv = check_passwords_from_db(path=path, master_password=password)
@@ -37,11 +40,12 @@ def keepass(path, password):
 
 
 @click.command()
-@click.option('--password', default=None, help='Password which should be checked.')
+@click.option(
+    '--password', default=None, help='Password which should be checked.')
 def password(password):
     """Check a single password."""
     if password is None:
-         password = click.prompt(
+        password = click.prompt(
             "Please enter a password which should be checked", hide_input=True
         )
     p = Password(password)
@@ -54,6 +58,7 @@ def password(password):
             click.echo("Please change your password!")
         else:
             click.echo("Your password is safe!")
+
 
 main.add_command(keepass)
 main.add_command(password)

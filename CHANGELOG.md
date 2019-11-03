@@ -2,6 +2,10 @@
 
 ## unreleased
 
+- introduce tox
+- introduce flake8
+- introduce flake8-click
+
 ## 0.3.0 (03.11.2019)
 
 ### added

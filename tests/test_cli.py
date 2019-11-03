@@ -20,7 +20,7 @@ def test_keepass_subcommand_returns_leaked_entry(mock_check):
         Please enter the master password for the database: 
         The passwords of following entries are leaked:
         [b'Entry: "test_title (test_user)"']
-    """
+    """  # noqa
     assert result.output == textwrap.dedent(expected_output)
 
 
@@ -35,7 +35,7 @@ def test_keepass_subcommand_returns_all_ok(mock_check):
         Please enter the path to the database: tests/test.kdbx
         Please enter the master password for the database: 
         Hooray, everything is safe!
-    """
+    """  # noqa
     assert result.output == textwrap.dedent(expected_output)
 
 
@@ -50,7 +50,7 @@ def test_keepass_subcommand_with_path_option(mock_check):
         Please enter the master password for the database: 
         The passwords of following entries are leaked:
         [b'Entry: "test_title (test_user)"']
-    """
+    """  # noqa
     assert result.output == textwrap.dedent(expected_output)
 
 
@@ -97,11 +97,11 @@ def test_password_subcommand_with_prompt(mock_password):
     expected_output = """\
         Please enter a password which should be checked: 
         Your password is safe!
-    """
+    """  # noqa
     assert result.output == textwrap.dedent(expected_output)
 
 
-@patch.object(Password,"is_leaked")
+@patch.object(Password, "is_leaked")
 def test_keepass_subcommand_error_handling(mock_password):
     mock_password.side_effect = ApiError("Error")
     runner = CliRunner()

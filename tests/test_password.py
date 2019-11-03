@@ -1,4 +1,5 @@
 import pytest
+import textwrap
 import socket
 
 from unittest.mock import patch
@@ -7,7 +8,11 @@ from hibpcli.exceptions import ApiError
 from hibpcli.password import Password
 
 # this is just a small part of a real response
-RESPONSE_TEXT = "FE5CCB19BA61C4C0873D391E987982FBBD3:74831\r\nFF36DC7D3284A39991ADA90CAF20D1E3C0D:1\r\nFFF983A91443AE72BD98E59ADAB93B31974:2"
+RESPONSE_TEXT = textwrap.dedent("""\
+    FE5CCB19BA61C4C0873D391E987982FBBD3:74831\r\n
+    FF36DC7D3284A39991ADA90CAF20D1E3C0D:1\r\n
+    FFF983A91443AE72BD98E59ADAB93B31974:2
+    """)
 
 
 def test_password_signature():

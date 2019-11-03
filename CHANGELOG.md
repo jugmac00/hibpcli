@@ -6,6 +6,8 @@
 - introduce flake8
 - introduce flake8-click
 - introduce coverage via coveralls
+- improve readme
+- add beta classifier
 
 ## 0.3.0 (03.11.2019)
 

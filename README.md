@@ -8,11 +8,9 @@
 
 A command line interface for the "haveibeenpwned.com" API - speaks keepass.
 
-## current state
-
-A little bit alpha.
-
 ## usage
+
+### check all passwords in your keepass database
 
 ```
 $ hibpcli keepass --path PATHTOKEEPASSDB --password PASSWORDFORKEEPASSDB
@@ -21,21 +19,17 @@ The passwords of following entries are leaked:
 [Entry: "test_title (test_user)"]
 ```
 
+### check a single password
+
 ```
-$ hibpcli password --password test
+$ hibpcli password --password PASSWORD
 
 Please change your password!
 ```
 
-
-## scope
-
-- check all passwords in a keepass db via hibp online API
-- check a single password
-
 ## contributions, feature requests, bug reports
 
-Please use https://github.com/jugmac00/hibpcli/issues
+Please create an issue at https://github.com/jugmac00/hibpcli/issues
 
 ## run tests
 
@@ -50,6 +44,7 @@ pytest --cov=hibpcli --cov=tests --cov-report term-missing
 ```
 
 ## thank you
+
 - click - https://click.palletsprojects.com
 - pykeepass - https://github.com/pschmitt/pykeepass
 - httpx - https://github.com/encode/httpx

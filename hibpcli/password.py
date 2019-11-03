@@ -16,7 +16,7 @@ class Password:
             result = httpx.get(
                 f"https://api.pwnedpasswords.com/range/{first_hash_part}"
             ).text
-        except socket.gaierror as e:
+        except socket.gaierror:
             raise ApiError("Error: Could not get a result from the API.")
         else:
             # the result is text with entries split by new line

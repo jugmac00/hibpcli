@@ -5,6 +5,7 @@
 - add new subcommand "password" for checking a single password
 - add pdb++ to dev dependencies
 - add some basic error handling
+- add some classifiers
 
 ## 0.2.0 (02.11.2019)
 

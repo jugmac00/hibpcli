@@ -2,6 +2,10 @@
 
 ## unreleased
 
+## 0.3.0 (03.11.2019)
+
+### added
+
 - add new subcommand "password" for checking a single password
 - add pdb++ to dev dependencies
 - add some basic error handling

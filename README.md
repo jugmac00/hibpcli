@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/jugmac00/hibpcli.svg?branch=master)](https://travis-ci.org/jugmac00/hibpcli)
+[![Coverage Status](https://coveralls.io/repos/github/jugmac00/hibpcli/badge.svg?branch=introduce-coverage)](https://coveralls.io/github/jugmac00/hibpcli?branch=introduce-coverage)
 [![Current version on PyPI](https://img.shields.io/pypi/v/hibpcli.svg)](https://pypi.org/project/hibpcli/)
 [![Requirements Status](https://requires.io/github/jugmac00/hibpcli/requirements.svg?branch=master)](https://requires.io/github/jugmac00/hibpcli/requirements/?branch=master)
 ![](https://img.shields.io/pypi/l/hibpcli.svg)

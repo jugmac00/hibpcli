@@ -1,6 +1,7 @@
 import hashlib
-import httpx
 import socket
+
+import httpx
 
 from hibpcli.exceptions import ApiError
 

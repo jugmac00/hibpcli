@@ -1,7 +1,7 @@
 import textwrap
+from unittest.mock import patch
 
 from click.testing import CliRunner
-from unittest.mock import patch
 
 from hibpcli.cli import main
 from hibpcli.exceptions import ApiError

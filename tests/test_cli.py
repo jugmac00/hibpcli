@@ -43,9 +43,7 @@ def test_keepass_subcommand_returns_all_ok(mock_check):
 def test_keepass_subcommand_with_path_option(mock_check):
     mock_check.return_value = [b'Entry: "test_title (test_user)"']
     runner = CliRunner()
-    result = runner.invoke(
-        main, ["keepass", "--path", "tests/test.kdbx"], input="test"
-    )
+    result = runner.invoke(main, ["keepass", "--path", "tests/test.kdbx"], input="test")
     expected_output = """\
         Please enter the master password for the database: 
         The passwords of following entries are leaked:
@@ -71,9 +69,7 @@ def test_keepass_subcommand_with_path_and_password_options(mock_check):
 @patch.object(Password, "is_leaked", return_value=True)
 def test_password_subcommand_for_leaked_password(mock_password):
     runner = CliRunner()
-    result = runner.invoke(
-        main, ["password", "--password", "test"]
-    )
+    result = runner.invoke(main, ["password", "--password", "test"])
     expected_output = "Please change your password!\n"
     assert result.output == expected_output
 
@@ -81,9 +77,7 @@ def test_password_subcommand_for_leaked_password(mock_password):
 @patch.object(Password, "is_leaked", return_value=False)
 def test_password_subcommand_for_safe_password(mock_password):
     runner = CliRunner()
-    result = runner.invoke(
-        main, ["password", "--password", "test"]
-    )
+    result = runner.invoke(main, ["password", "--password", "test"])
     expected_output = "Your password is safe!\n"
     assert result.output == expected_output
 
@@ -91,9 +85,7 @@ def test_password_subcommand_for_safe_password(mock_password):
 @patch.object(Password, "is_leaked", return_value=False)
 def test_password_subcommand_with_prompt(mock_password):
     runner = CliRunner()
-    result = runner.invoke(
-        main, ["password"], input="test"
-    )
+    result = runner.invoke(main, ["password"], input="test")
     expected_output = """\
         Please enter a password which should be checked: 
         Your password is safe!
@@ -115,8 +107,6 @@ def test_keepass_subcommand_error_handling(mock_password):
 @patch.object(Password, "is_leaked", side_effect=ApiError("Error"))
 def test_password_subcommand_error_handling(mock_password):
     runner = CliRunner()
-    result = runner.invoke(
-        main, ["password", "--password", "test"]
-    )
+    result = runner.invoke(main, ["password", "--password", "test"])
     expected_output = "Error\n"
     assert result.output == expected_output

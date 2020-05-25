@@ -7,9 +7,8 @@ python:
 
 install:
   - pip install --upgrade pip
-  - pip install flit
+  - pip install e .
   - pip install coveralls
-  - flit install --symlink
 
 script: pytest --cov=hibpcli --cov=test
 

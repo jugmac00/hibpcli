@@ -1,6 +1,5 @@
-from pykeepass import PyKeePass
-
 from hibpcli.password import Password
+from pykeepass import PyKeePass
 
 
 def check_passwords_from_db(path, master_password):

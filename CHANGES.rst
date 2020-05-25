@@ -13,6 +13,7 @@ unreleased
 - convert README and CHANGES to rst format
 - use setup.py instead of flit for packaging
 - move source code in src directory
+- update versions of installation dependencies
 
 
 0.3.0 (03.11.2019)

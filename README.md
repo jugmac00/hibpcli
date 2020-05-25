@@ -31,16 +31,28 @@ Please change your password!
 
 Please create an issue at https://github.com/jugmac00/hibpcli/issues
 
-## run tests
+## run all tests and linters
 
 ```
-pytest
+tox
 ```
 
-## run tests with coverage
+## run tests for Python 3.8 only
 
 ```
-pytest --cov=hibpcli --cov=tests --cov-report term-missing
+tox -e py38
+```
+
+## pass through e.g. verbose argument to pytest
+
+```
+tox -e py38 -- -vv
+```
+
+## generate coverage
+
+```
+tox -e coverage
 ```
 
 ## thank you

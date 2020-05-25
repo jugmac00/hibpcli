@@ -12,7 +12,7 @@ def test_keepass_subcommand_returns_leaked_entry(mock_check):
     mock_check.return_value = [b'Entry: "test_title (test_user)"']
     runner = CliRunner()
     result = runner.invoke(
-        main, ["keepass"], input="\n".join(["tests/test.kdbx", "test"])
+        main, ["check-keepass"], input="\n".join(["tests/test.kdbx", "test"])
     )
     expected_output = """\
         Please enter the path to the database: tests/test.kdbx
@@ -28,7 +28,7 @@ def test_keepass_subcommand_returns_all_ok(mock_check):
     mock_check.return_value = list()
     runner = CliRunner()
     result = runner.invoke(
-        main, ["keepass"], input="\n".join(["tests/test.kdbx", "test"])
+        main, ["check-keepass"], input="\n".join(["tests/test.kdbx", "test"])
     )
     expected_output = """\
         Please enter the path to the database: tests/test.kdbx
@@ -42,7 +42,9 @@ def test_keepass_subcommand_returns_all_ok(mock_check):
 def test_keepass_subcommand_with_path_option(mock_check):
     mock_check.return_value = [b'Entry: "test_title (test_user)"']
     runner = CliRunner()
-    result = runner.invoke(main, ["keepass", "--path", "tests/test.kdbx"], input="test")
+    result = runner.invoke(
+        main, ["check-keepass", "--path", "tests/test.kdbx"], input="test"
+    )
     expected_output = """\
         Please enter the master password for the database: 
         The passwords of following entries are leaked:
@@ -56,7 +58,7 @@ def test_keepass_subcommand_with_path_and_password_options(mock_check):
     mock_check.return_value = [b'Entry: "test_title (test_user)"']
     runner = CliRunner()
     result = runner.invoke(
-        main, ["keepass", "--path", "tests/test.kdbx", "--password", "test"]
+        main, ["check-keepass", "--path", "tests/test.kdbx", "--password", "test"]
     )
     expected_output = """\
         The passwords of following entries are leaked:
@@ -97,7 +99,7 @@ def test_keepass_subcommand_error_handling(mock_password):
     mock_password.side_effect = ApiError("Error")
     runner = CliRunner()
     result = runner.invoke(
-        main, ["keepass", "--path", "tests/test.kdbx", "--password", "test"]
+        main, ["check-keepass", "--path", "tests/test.kdbx", "--password", "test"]
     )
     expected_output = "Error\n"
     assert result.output == expected_output

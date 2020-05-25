@@ -24,7 +24,7 @@ check all passwords in your keepass database
 
 .. code::
 
-    $ hibpcli keepass --path PATHTOKEEPASSDB --password PASSWORDFORKEEPASSDB
+    $ hibpcli check-keepass --path PATHTOKEEPASSDB --password PASSWORDFORKEEPASSDB
 
     The passwords of following entries are leaked:
     [Entry: "test_title (test_user)"]

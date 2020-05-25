@@ -14,7 +14,8 @@ unreleased
 - use setup.py instead of flit for packaging
 - move source code in src directory
 - update versions of installation dependencies
-- subcommand to check a single password now is name `check-password`
+- subcommand to check a single password now is `check-password`
+- subcommand to check a keepass db now is `check-keepass`
 
 
 0.3.0 (03.11.2019)

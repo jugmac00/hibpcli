@@ -19,7 +19,7 @@ def test_keepass_subcommand_returns_leaked_entry(mock_check):
         Please enter the master password for the database: 
         The passwords of following entries are leaked:
         [b'Entry: "test_title (test_user)"']
-    """  # noqa
+    """  # noqa: W291
     assert result.output == textwrap.dedent(expected_output)
 
 
@@ -34,7 +34,7 @@ def test_keepass_subcommand_returns_all_ok(mock_check):
         Please enter the path to the database: tests/test.kdbx
         Please enter the master password for the database: 
         Hooray, everything is safe!
-    """  # noqa
+    """  # noqa: W291
     assert result.output == textwrap.dedent(expected_output)
 
 
@@ -47,7 +47,7 @@ def test_keepass_subcommand_with_path_option(mock_check):
         Please enter the master password for the database: 
         The passwords of following entries are leaked:
         [b'Entry: "test_title (test_user)"']
-    """  # noqa
+    """  # noqa: W291
     assert result.output == textwrap.dedent(expected_output)
 
 
@@ -88,7 +88,7 @@ def test_password_subcommand_with_prompt(mock_password):
     expected_output = """\
         Please enter a password which should be checked: 
         Your password is safe!
-    """  # noqa
+    """  # noqa: W291
     assert result.output == textwrap.dedent(expected_output)
 
 

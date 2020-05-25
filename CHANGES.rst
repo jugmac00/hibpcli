@@ -18,6 +18,7 @@ unreleased
 - subcommand to check a keepass db now is `check-keepass`
 
 
+
 0.3.0 (03.11.2019)
 ------------------
 

@@ -1,20 +1,31 @@
+import codecs
+import os
+
 from setuptools import find_packages, setup
 
-version = "0.4.0.dev"
+HERE = os.path.abspath(os.path.dirname(__file__))
+VERSION = "0.4.0.dev"
 
-with open("README.rst") as readme_file:
-    README = readme_file.read()
 
-with open("CHANGES.rst") as changes_file:
-    CHANGES = changes_file.read()
+def read(*parts):
+    """Build an absolute path from *parts*...
+
+    ... and return the contents of the resulting file.
+    Assume UTF-8 encoding.
+
+    Thanks to:
+    https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/
+    """
+    with codecs.open(os.path.join(HERE, *parts), "rb", "utf-8") as f:
+        return f.read()
 
 
 setup(
     name="hibpcli",
-    version=version,
+    version=VERSION,
     description="A command line interface for the **haveibeenpwned.com** API - "
     "speaks keepass.",
-    long_description=README + "\n\n" + CHANGES,
+    long_description=read("README.rst") + "\n\n" + read("CHANGES.rst"),
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",

@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/asottile/seed-isort-config
-    rev: v1.9.4
+    rev: v2.1.1
     hooks:
     - id: seed-isort-config
 
@@ -10,12 +10,12 @@ repos:
     - id: isort
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.5.0  # Use the ref you want to point at
+    rev: v3.1.0  # Use the ref you want to point at
     hooks:
       - id: debug-statements
 
   - repo: https://gitlab.com/pycqa/flake8
-    rev: '8f9b4931b9a28896fb43edccb23016a7540f5b82'  # pick a git hash / tag to point to
+    rev: 3.8.2  # pick a git hash / tag to point to
     hooks:
     - id: flake8
 

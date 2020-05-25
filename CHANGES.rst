@@ -3,21 +3,28 @@ CHANGELOG
 
 unreleased
 ----------
+- nothing yet
 
+0.4.0 (25.05.2020)
+------------------
+
+added
+~~~~~
 - introduce tox
 - introduce flake8
 - introduce flake8-click
 - introduce coverage via coveralls
-- improve readme
 - add beta classifier
+
+changed
+~~~~~~~
+- improve readme
 - convert README and CHANGES to rst format
 - use setup.py instead of flit for packaging
 - move source code in src directory
 - update versions of installation dependencies
 - subcommand to check a single password now is `check-password`
 - subcommand to check a keepass db now is `check-keepass`
-
-
 
 0.3.0 (03.11.2019)
 ------------------

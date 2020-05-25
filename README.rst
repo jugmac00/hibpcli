@@ -35,7 +35,7 @@ check a single password
 
 .. code::
 
-    $ hibpcli password --password PASSWORD
+    $ hibpcli check-password --password PASSWORD
 
     Please change your password!
 

@@ -37,7 +37,7 @@ def keepass(path, password):
 
 @click.command()
 @click.option("--password", default=None, help="Password which should be checked.")
-def password(password):
+def check_password(password):
     """Check a single password."""
     if password is None:
         password = click.prompt(
@@ -56,7 +56,7 @@ def password(password):
 
 
 main.add_command(keepass)
-main.add_command(password)
+main.add_command(check_password)
 
 
 if __name__ == "__main__":

@@ -2,7 +2,6 @@ import hashlib
 import socket
 
 import httpx
-
 from hibpcli.exceptions import ApiError
 
 

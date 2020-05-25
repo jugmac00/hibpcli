@@ -1,0 +1,6 @@
+include *.rst
+include *.yaml
+include LICENSE
+include tox.ini
+recursive-include tests *.kdbx
+recursive-include tests *.py

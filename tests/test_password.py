@@ -3,7 +3,6 @@ import textwrap
 from unittest.mock import patch
 
 import pytest
-
 from hibpcli.exceptions import ApiError
 from hibpcli.password import Password
 
@@ -19,7 +18,7 @@ RESPONSE_TEXT = textwrap.dedent(
 
 def test_password_signature():
     with pytest.raises(TypeError):
-        Password()  # pylint: disable=E1120
+        Password()  # type: ignore
 
 
 @patch("hibpcli.password.httpx.get")

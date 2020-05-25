@@ -13,7 +13,7 @@ def main():
 @click.command()
 @click.option("--path", default=None, help="Path to KeePass database.")
 @click.option("--password", default=None, help="Password for the KeePass database.")
-def keepass(path, password):
+def check_keepass(path, password):
     """Check all passwords stored in the keepass database."""
     if path is None:
         path = click.prompt(
@@ -55,7 +55,7 @@ def check_password(password):
             click.echo("Your password is safe!")
 
 
-main.add_command(keepass)
+main.add_command(check_keepass)
 main.add_command(check_password)
 
 

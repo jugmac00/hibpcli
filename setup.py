@@ -41,9 +41,19 @@ setup(
     license="MIT",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
-    extras_require={"test": ["pytest >=5.2.2", "pytest-cov",], "dev": ["pdbpp"]},
+    extras_require={
+        "test": [
+            "pytest >=5.2.2",
+            "pytest-cov",
+        ],
+        "dev": ["pdbpp"],
+    },
     include_package_data=True,
     zip_safe=True,
-    install_requires=["click>=7.1.2", "pykeepass>=3.2.0", "httpx>=0.13.3",],
+    install_requires=[
+        "click>=7.1.2",
+        "pykeepass>=3.2.0",
+        "httpx>=0.13.3",
+    ],
     entry_points={"console_scripts": ["hibpcli = hibpcli.cli:main"]},
 )

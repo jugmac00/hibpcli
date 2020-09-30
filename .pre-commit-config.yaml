@@ -18,7 +18,6 @@ repos:
     rev: 3.8.2  # pick a git hash / tag to point to
     hooks:
     - id: flake8
-      additional_dependencies: [flake8-click, flake8-bugbear]
 
   - repo: https://github.com/psf/black
     rev: 19.10b0

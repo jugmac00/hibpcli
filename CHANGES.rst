@@ -1,9 +1,16 @@
 CHANGELOG
 =========
 
-unreleased
-----------
-- nothing yet
+0.4.1 (30.09.2020)
+------------------
+
+added
+~~~~~
+- add packaging guideline
+
+changed
+~~~~~~~
+- run linters via `pre-commit`
 
 0.4.0 (25.05.2020)
 ------------------

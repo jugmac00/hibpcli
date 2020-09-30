@@ -1,8 +1,8 @@
 .. image:: https://travis-ci.com/jugmac00/hibpcli.svg?branch=master
-    :target: https://travis-ci.com/jugmac00/hibpcli
+  :target: https://travis-ci.com/jugmac00/hibpcli
 
 .. image:: https://coveralls.io/repos/github/jugmac00/hibpcli/badge.svg?branch=master
-    :target: https://coveralls.io/github/jugmac00/hibpcli?branch=master
+  :target: https://coveralls.io/github/jugmac00/hibpcli?branch=master
 
 .. image:: https://img.shields.io/pypi/v/hibpcli.svg
   :target: https://pypi.org/project/hibpcli/
@@ -11,11 +11,10 @@
   :target: https://pypi.org/project/hibpcli/
 
 .. image:: https://requires.io/github/jugmac00/hibpcli/requirements.svg?branch=master
-     :target: https://requires.io/github/jugmac00/hibpcli/requirements/?branch=master
-     :alt: Requirements Status
+  :target: https://requires.io/github/jugmac00/hibpcli/requirements/?branch=master
 
-.. image:: https://img.shields.io/pypi/l/hibpcli   
-    :alt: PyPI - License
+.. image:: https://img.shields.io/pypi/l/hibpcli
+  :alt: PyPI - License
 
 
 hibpcli

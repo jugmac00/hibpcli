@@ -79,8 +79,8 @@ Release process
 
     # upload to test pypi
 
-    $ twine upload -r test --sign dist/hibpcli*
+    $ dev-env/bin/twine upload -r test --sign dist/hibpcli*
 
     # upload to pypi
 
-    $ twine upload -r pypi --sign dist/hibpcli*
+    $ dev-env/bin/twine upload -r pypi --sign dist/hibpcli*

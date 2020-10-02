@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+unreleased
+----------
+
+added
+~~~~~
+- add the `bandit` security checker
+
 0.4.1 (30.09.2020)
 ------------------
 

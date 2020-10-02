@@ -27,6 +27,8 @@ class Password:
             return second_hash_part in partial_hash_list
 
     def _generate_hash(self):
-        hash_object = hashlib.sha1(bytes(self.password, "UTF-8"))
+        # using sha1 here is no security issue
+        # the API uses it, so there is no other way to access the data
+        hash_object = hashlib.sha1(bytes(self.password, "UTF-8"))  # nosec
         hex_digest = hash_object.hexdigest().upper()
         return hex_digest

@@ -14,7 +14,7 @@
   :target: https://requires.io/github/jugmac00/hibpcli/requirements/?branch=master
 
 .. image:: https://img.shields.io/pypi/l/hibpcli
-  :alt: PyPI - License
+  :target: https://github.com/jugmac00/hibpcli/blob/master/LICENSE
 
 
 hibpcli

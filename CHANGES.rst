@@ -7,6 +7,7 @@ unreleased
 added
 ~~~~~
 - add the `bandit` security checker
+- add support for Python 3.9
 
 0.4.1 (30.09.2020)
 ------------------

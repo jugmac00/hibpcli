@@ -3,7 +3,7 @@ from typing import Optional
 import click
 from hibpcli.exceptions import ApiError, KeepassError
 from hibpcli.keepass import check_passwords_from_db
-from hibpcli.password import Password
+from hibpcli.password import LeaksStore
 
 
 @click.group()
@@ -43,9 +43,9 @@ def check_password(password: Optional[str]) -> None:
         password = click.prompt(
             "Please enter a password which should be checked", hide_input=True
         )
-    p = Password(password)
+    leaksstore = LeaksStore()
     try:
-        is_leaked = p.is_leaked()
+        is_leaked = password in leaksstore
     except ApiError as e:
         click.echo(str(e))
     else:

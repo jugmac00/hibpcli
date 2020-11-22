@@ -4,10 +4,10 @@ from unittest.mock import patch
 from click.testing import CliRunner
 from hibpcli.cli import main
 from hibpcli.exceptions import ApiError
-from hibpcli.password import Password
+from hibpcli.password import LeaksStore
 
 
-@patch.object(Password, "is_leaked", return_value=True)
+@patch.object(LeaksStore, "__contains__", return_value=True)
 def test_password_subcommand_for_leaked_password(mock_password):
     runner = CliRunner()
     result = runner.invoke(main, ["check-password", "--password", "test"])
@@ -15,7 +15,7 @@ def test_password_subcommand_for_leaked_password(mock_password):
     assert result.output == expected_output
 
 
-@patch.object(Password, "is_leaked", return_value=False)
+@patch.object(LeaksStore, "__contains__", return_value=False)
 def test_password_subcommand_for_safe_password(mock_password):
     runner = CliRunner()
     result = runner.invoke(main, ["check-password", "--password", "test"])
@@ -23,7 +23,7 @@ def test_password_subcommand_for_safe_password(mock_password):
     assert result.output == expected_output
 
 
-@patch.object(Password, "is_leaked", return_value=False)
+@patch.object(LeaksStore, "__contains__", return_value=False)
 def test_password_subcommand_with_prompt(mock_password):
     runner = CliRunner()
     result = runner.invoke(main, ["check-password"], input="test")
@@ -34,7 +34,7 @@ def test_password_subcommand_with_prompt(mock_password):
     assert result.output == textwrap.dedent(expected_output)
 
 
-@patch.object(Password, "is_leaked", side_effect=ApiError("Error"))
+@patch.object(LeaksStore, "__contains__", side_effect=ApiError("Error"))
 def test_password_subcommand_error_handling(mock_password):
     runner = CliRunner()
     result = runner.invoke(main, ["check-password", "--password", "test"])

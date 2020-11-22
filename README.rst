@@ -22,6 +22,14 @@ hibpcli
 
 A command line interface for the **haveibeenpwned.com** API - speaks keepass.
 
+installation
+------------
+
+.. code::
+
+    $ pip install hibpcli
+
+
 usage
 -----
 

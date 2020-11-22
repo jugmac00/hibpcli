@@ -6,10 +6,10 @@ from hibpcli.exceptions import ApiError
 
 
 class Password:
-    def __init__(self, password):
+    def __init__(self, password: str) -> None:
         self.password = password
 
-    def is_leaked(self):
+    def is_leaked(self) -> bool:
         hex_digest = self._generate_hash()
         first_hash_part, second_hash_part = hex_digest[:5], hex_digest[5:]
         try:
@@ -25,7 +25,7 @@ class Password:
             # cut off string - information after the hash is of no interest
             return second_hash_part in (line[:35] for line in result.splitlines())
 
-    def _generate_hash(self):
+    def _generate_hash(self) -> str:
         # using sha1 here is no security issue
         # the API uses it, so there is no other way to access the data
         hash_object = hashlib.sha1(bytes(self.password, "UTF-8"))  # nosec

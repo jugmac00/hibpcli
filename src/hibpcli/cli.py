@@ -1,3 +1,5 @@
+from typing import Optional
+
 import click
 from hibpcli.exceptions import ApiError
 from hibpcli.keepass import check_passwords_from_db
@@ -5,7 +7,7 @@ from hibpcli.password import Password
 
 
 @click.group()
-def main():
+def main() -> None:
     """Command line interface to the haveibeenpwned.com API."""
     pass
 
@@ -13,7 +15,7 @@ def main():
 @click.command()
 @click.argument("path")
 @click.option("--password", default=None, help="Password for the KeePass database.")
-def check_keepass(path, password):
+def check_keepass(path: str, password: Optional[str]) -> None:
     """Check all passwords stored in the keepass database."""
     if password is None:
         password = click.prompt(
@@ -33,7 +35,7 @@ def check_keepass(path, password):
 
 @click.command()
 @click.option("--password", default=None, help="Password which should be checked.")
-def check_password(password):
+def check_password(password: Optional[str]) -> None:
     """Check a single password."""
     if password is None:
         password = click.prompt(

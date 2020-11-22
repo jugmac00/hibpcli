@@ -1,8 +1,10 @@
+from typing import List
+
 from hibpcli.password import Password
-from pykeepass import PyKeePass
+from pykeepass import PyKeePass  # type: ignore
 
 
-def check_passwords_from_db(path, master_password):
+def check_passwords_from_db(path: str, master_password: str) -> List[str]:
     """ - """
     kp = PyKeePass(path, password=master_password)
     return [

@@ -23,8 +23,7 @@ class Password:
             # one entry consists of the rest of the hash and count of
             # leak, separated by a colon
             # cut off string - information after the hash is of no interest
-            partial_hash_list = [line[:35] for line in result.splitlines()]
-            return second_hash_part in partial_hash_list
+            return second_hash_part in (line[:35] for line in result.splitlines())
 
     def _generate_hash(self):
         # using sha1 here is no security issue

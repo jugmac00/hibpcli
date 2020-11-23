@@ -19,7 +19,7 @@ def test_password_subcommand_for_leaked_password(mock_password):
 def test_password_subcommand_for_safe_password(mock_password):
     runner = CliRunner()
     result = runner.invoke(main, ["check-password", "--password", "test"])
-    expected_output = "Your password is safe!\n"
+    expected_output = "Your password has not been reported leaked until now.\n"
     assert result.output == expected_output
 
 
@@ -29,7 +29,7 @@ def test_password_subcommand_with_prompt(mock_password):
     result = runner.invoke(main, ["check-password"], input="test")
     expected_output = """\
         Please enter a password which should be checked: 
-        Your password is safe!
+        Your password has not been reported leaked until now.
     """  # noqa: W291
     assert result.output == textwrap.dedent(expected_output)
 

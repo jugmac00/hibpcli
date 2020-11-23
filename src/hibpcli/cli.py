@@ -30,7 +30,7 @@ def check_keepass(path: str, password: Optional[str]) -> None:
             click.echo("The passwords of following entries are leaked:")
             click.echo(rv)
         else:
-            click.echo("Hooray, everything is safe!")
+            click.echo("Your passwords have not been reported leaked until now.")
 
 
 @click.command()
@@ -50,7 +50,7 @@ def check_password(password: Optional[str]) -> None:
         if is_leaked:
             click.echo("Please change your password!")
         else:
-            click.echo("Your password is safe!")
+            click.echo("Your password has not been reported leaked until now.")
 
 
 main.add_command(check_keepass)

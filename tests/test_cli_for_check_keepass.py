@@ -34,7 +34,7 @@ def test_keepass_subcommand_returns_all_ok(mock_check):
     expected_output = textwrap.dedent(
         """\
         Please enter the master password for the database: 
-        Hooray, everything is safe!
+        Your passwords have not been reported leaked until now.
     """  # noqa: W291
     )
     assert result.output == expected_output

@@ -10,6 +10,7 @@ added
 - add support for Python 3.9
 - add type annotations
 - improve message when there are no known leaks for a password(@eumiro)
+- provide user friendly error message when given password is wrong
 
 0.4.1 (30.09.2020)
 ------------------

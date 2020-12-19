@@ -1,7 +1,7 @@
 from typing import Optional
 
 import click
-from hibpcli.exceptions import ApiError
+from hibpcli.exceptions import ApiError, KeepassError
 from hibpcli.keepass import check_passwords_from_db
 from hibpcli.password import Password
 
@@ -23,6 +23,8 @@ def check_keepass(path: str, password: Optional[str]) -> None:
         )
     try:
         rv = check_passwords_from_db(path=path, master_password=password)
+    except KeepassError:
+        click.echo("The entered password is not correct. Please try again.")
     except ApiError as e:
         click.echo(str(e))
     else:

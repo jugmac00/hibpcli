@@ -80,3 +80,11 @@ def test_keepass_subcommand_error_handling(mock_password):
     )
     expected_output = "Error\n"
     assert result.output == expected_output
+
+
+def test_keepass_wrong_password():
+    runner = CliRunner()
+    result = runner.invoke(
+        main, ["check-keepass", "tests/test.kdbx", "--password", "wrong-password"]
+    )
+    assert result.output == "The entered password is not correct. Please try again.\n"

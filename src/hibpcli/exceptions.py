@@ -4,3 +4,7 @@ class HibpError(Exception):
 
 class ApiError(HibpError):
     pass
+
+
+class KeepassError(HibpError):
+    pass

@@ -3,6 +3,7 @@ import socket
 from typing import Set
 
 import httpx
+
 from hibpcli.exceptions import ApiError
 
 

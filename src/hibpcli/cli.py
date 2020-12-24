@@ -1,6 +1,7 @@
 from typing import Optional
 
 import click
+
 from hibpcli.exceptions import ApiError, KeepassError
 from hibpcli.keepass import check_passwords_from_db
 from hibpcli.leaks import LeaksStore

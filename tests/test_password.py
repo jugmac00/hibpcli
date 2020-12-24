@@ -3,6 +3,7 @@ import textwrap
 from unittest.mock import patch
 
 import pytest
+
 from hibpcli.exceptions import ApiError
 from hibpcli.leaks import LeaksStore
 

@@ -2,6 +2,7 @@ import textwrap
 from unittest.mock import patch
 
 from click.testing import CliRunner
+
 from hibpcli.cli import main
 from hibpcli.exceptions import ApiError
 from hibpcli.leaks import LeaksStore

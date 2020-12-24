@@ -1,6 +1,6 @@
 import hashlib
 import socket
-from typing import Set
+from typing import Dict, Set
 
 import httpx
 
@@ -9,7 +9,7 @@ from hibpcli.exceptions import ApiError
 
 class LeaksStore:
     def __init__(self) -> None:
-        self._pages = {}
+        self._pages: Dict[str, Set[str]] = {}
 
     def __contains__(self, password: str) -> bool:
         hex_digest = self._generate_hash(password)
@@ -27,7 +27,7 @@ class LeaksStore:
         return hex_digest
 
     @staticmethod
-    def _load_page(hash_head: str) -> Set:
+    def _load_page(hash_head: str) -> Set[str]:
         """Load a list of hash/occurrence pairs for a given hash_head.
 
         Returns a set of hash_tails only.

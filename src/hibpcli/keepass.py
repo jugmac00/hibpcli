@@ -1,7 +1,7 @@
 from typing import List
 
 from pykeepass import PyKeePass  # type: ignore
-from pykeepass.exceptions import CredentialsError
+from pykeepass.exceptions import CredentialsError  # type: ignore
 
 from hibpcli.exceptions import KeepassError
 from hibpcli.leaks import LeaksStore

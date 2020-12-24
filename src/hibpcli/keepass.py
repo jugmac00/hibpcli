@@ -1,6 +1,6 @@
 from typing import List
 
-from hibpcli.password import LeaksStore
+from hibpcli.leaks import LeaksStore
 from pykeepass import PyKeePass  # type: ignore
 
 

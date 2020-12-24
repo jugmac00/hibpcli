@@ -3,7 +3,7 @@ from typing import Optional
 import click
 from hibpcli.exceptions import ApiError
 from hibpcli.keepass import check_passwords_from_db
-from hibpcli.password import LeaksStore
+from hibpcli.leaks import LeaksStore
 
 
 @click.group()

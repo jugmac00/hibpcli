@@ -19,9 +19,7 @@ class LeaksStore:
     def _load_page(self, hash_head: str) -> dict:
         """Load a list of leaked passwords for a given hash_head and return a set."""
         try:
-            result = httpx.get(
-                f"https://api.pwnedpasswords.com/range/{hash_head}"
-            ).text
+            result = httpx.get(f"https://api.pwnedpasswords.com/range/{hash_head}").text
         except socket.gaierror:
             raise ApiError("Error: Could not get a result from the API.")
         else:

@@ -4,7 +4,7 @@ from unittest.mock import patch
 
 import pytest
 from hibpcli.exceptions import ApiError
-from hibpcli.password import Password
+from hibpcli.leaks import LeaksStore
 
 # this is just a small part of a real response
 RESPONSE_TEXT = textwrap.dedent(
@@ -17,21 +17,22 @@ RESPONSE_TEXT = textwrap.dedent(
 
 
 def test_password_signature():
+    leaksstore = LeaksStore()
     with pytest.raises(TypeError):
-        Password()  # type: ignore
+        None in leaksstore  # type: ignore
 
 
-@patch("hibpcli.password.httpx.get")
+@patch("hibpcli.leaks.httpx.get")
 def test_is_leaked_password(mock_get):
     mock_get.return_value.text = RESPONSE_TEXT
-    p = Password("test")
-    assert p.is_leaked() is True
+    leaksstore = LeaksStore()
+    assert "test" in leaksstore
     mock_get.assert_called_with("https://api.pwnedpasswords.com/range/A94A8")
 
 
-@patch("hibpcli.password.httpx.get")
+@patch("hibpcli.leaks.httpx.get")
 def test_is_leaked_raises_api_error(mock_get):
     mock_get.side_effect = socket.gaierror
-    p = Password("test")
+    leaksstore = LeaksStore()
     with pytest.raises(ApiError):
-        p.is_leaked()
+        "test" in leaksstore

@@ -9,8 +9,9 @@ added
 - add the `bandit` security checker
 - add support for Python 3.9
 - add type annotations
-- improve message when there are no known leaks for a password(@eumiro)
+- improve message when there are no known leaks for a password (@eumiro)
 - provide user friendly error message when given password is wrong
+- provide caching for password lookups (@eumiro)
 
 0.4.1 (30.09.2020)
 ------------------

@@ -4,7 +4,7 @@ from unittest.mock import patch
 from click.testing import CliRunner
 from hibpcli.cli import main
 from hibpcli.exceptions import ApiError
-from hibpcli.password import Password
+from hibpcli.leaks import LeaksStore
 
 
 @patch("hibpcli.cli.check_passwords_from_db")
@@ -71,7 +71,7 @@ def test_keepass_subcommand_with_path_and_password_options(mock_check):
     assert result.output == expected_output
 
 
-@patch.object(Password, "is_leaked")
+@patch.object(LeaksStore, "__contains__")
 def test_keepass_subcommand_error_handling(mock_password):
     mock_password.side_effect = ApiError("Error")
     runner = CliRunner()

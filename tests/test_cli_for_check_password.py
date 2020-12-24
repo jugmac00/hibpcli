@@ -4,7 +4,7 @@ from unittest.mock import patch
 from click.testing import CliRunner
 from hibpcli.cli import main
 from hibpcli.exceptions import ApiError
-from hibpcli.password import LeaksStore
+from hibpcli.leaks import LeaksStore
 
 
 @patch.object(LeaksStore, "__contains__", return_value=True)

@@ -44,7 +44,7 @@ setup(
     package_dir={"": "src"},
     extras_require={
         "test": [
-            "pytest,
+            "pytest",
             "coverage",
         ],
         "dev": ["pdbpp"],

@@ -13,6 +13,11 @@ added
 - provide user friendly error message when given password is wrong
 - provide caching for password lookups (@eumiro)
 
+changed
+~~~~~~~
+- run coverage directly instead of pytest-cov
+- use gh actions instead of Travis
+
 0.4.1 (30.09.2020)
 ------------------
 

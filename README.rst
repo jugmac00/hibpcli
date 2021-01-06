@@ -1,5 +1,6 @@
-.. image:: https://travis-ci.com/jugmac00/hibpcli.svg?branch=master
-  :target: https://travis-ci.com/jugmac00/hibpcli
+.. image:: https://github.com/jugmac00/hibpcli/workflows/CI/badge.svg?branch=master
+   :target: https://github.com/jugmac00/hibpcli/actions?workflow=CI
+   :alt: CI Status
 
 .. image:: https://coveralls.io/repos/github/jugmac00/hibpcli/badge.svg?branch=master
   :target: https://coveralls.io/github/jugmac00/hibpcli?branch=master

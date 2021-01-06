@@ -44,8 +44,8 @@ setup(
     package_dir={"": "src"},
     extras_require={
         "test": [
-            "pytest >=5.2.2",
-            "pytest-cov",
+            "pytest",
+            "coverage",
         ],
         "dev": ["pdbpp"],
     },

@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/mgedmin/check-python-versions
-    rev: 0.17.0
+    rev: 0.17.1
     hooks:
     -   id: check-python-versions
 -   repo: https://github.com/pre-commit/pre-commit-hooks
@@ -20,7 +20,7 @@ repos:
         - flake8-click==0.3.1
         - flake8-bugbear==20.1.4
 -   repo: https://github.com/PyCQA/isort.git
-    rev: 5.6.4
+    rev: 5.7.0
     hooks:
     -   id: isort
 -   repo: https://github.com/PyCQA/bandit

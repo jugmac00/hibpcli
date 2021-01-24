@@ -26,6 +26,7 @@ setup(
     description="A command line interface for the **haveibeenpwned.com** API - "
     "speaks keepass.",
     long_description=read("README.rst") + "\n\n" + read("CHANGES.rst"),
+    long_description_content_type="text/x-rst",
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",

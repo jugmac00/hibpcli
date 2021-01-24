@@ -54,4 +54,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
-    - uses: jugmac00/will-it-build@main
+    - uses: jugmac00/will-it-build@v0.0.2

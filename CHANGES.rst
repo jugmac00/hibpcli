@@ -1,9 +1,15 @@
 CHANGELOG
 =========
 
+unreleased
+----------
+- nothing yet
+
 0.5.1 (07.02.2021)
 ------------------
 
+changed
+~~~~~~~
 - pin pykeepass as version 4.0 is broken, see https://github.com/libkeepass/pykeepass/issues/244
 
 

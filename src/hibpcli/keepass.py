@@ -8,7 +8,7 @@ from hibpcli.leaks import LeaksStore
 
 
 def check_passwords_from_db(path: str, master_password: str) -> List[str]:
-    """ - """
+    """-"""
     try:
         kp = PyKeePass(path, password=master_password)
     except CredentialsError:

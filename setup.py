@@ -54,7 +54,7 @@ setup(
     zip_safe=True,
     install_requires=[
         "click>=7.1.2",
-        "pykeepass==3.2.1",
+        "pykeepass==4.0.1",
         "httpx>=0.13.3",
     ],
     entry_points={"console_scripts": ["hibpcli = hibpcli.cli:main"]},

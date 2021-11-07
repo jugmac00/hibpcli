@@ -1,9 +1,12 @@
 CHANGELOG
 =========
 
-unreleased
-----------
-- nothing yet
+0.6.0 (07.11.2021)
+------------------
+
+added
+~~~~~
+- add support for Python 3.10
 
 0.5.1 (07.02.2021)
 ------------------

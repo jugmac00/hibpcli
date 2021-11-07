@@ -8,6 +8,10 @@ added
 ~~~~~
 - add support for Python 3.10
 
+changed
+~~~~~~~
+- loosen restriction on pykeepass (@denvera)
+
 0.5.1 (07.02.2021)
 ------------------
 

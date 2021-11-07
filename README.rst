@@ -11,9 +11,6 @@
 .. image:: https://img.shields.io/pypi/pyversions/hibpcli.svg
   :target: https://pypi.org/project/hibpcli/
 
-.. image:: https://requires.io/github/jugmac00/hibpcli/requirements.svg?branch=master
-  :target: https://requires.io/github/jugmac00/hibpcli/requirements/?branch=master
-
 .. image:: https://img.shields.io/pypi/l/hibpcli
   :target: https://github.com/jugmac00/hibpcli/blob/master/LICENSE
 

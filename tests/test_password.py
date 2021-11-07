@@ -20,7 +20,7 @@ RESPONSE_TEXT = textwrap.dedent(
 def test_password_signature():
     leaksstore = LeaksStore()
     with pytest.raises(TypeError):
-        None in leaksstore  # type: ignore
+        None in leaksstore  # type: ignore  # noqa: B015
 
 
 @patch("hibpcli.leaks.httpx.get")
@@ -36,4 +36,4 @@ def test_is_leaked_raises_api_error(mock_get):
     mock_get.side_effect = socket.gaierror
     leaksstore = LeaksStore()
     with pytest.raises(ApiError):
-        "test" in leaksstore
+        "test" in leaksstore  # noqa: B015

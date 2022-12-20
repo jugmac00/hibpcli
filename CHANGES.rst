@@ -1,6 +1,19 @@
 CHANGELOG
 =========
 
+0.7.0 (20.12.2022)
+------------------
+
+added
+~~~~~
+- add support for Python 3.11
+
+removed
+~~~~~~~
+- remove support for Python 3.6 (eol)
+- remove `tox-ini-fmt` as it clashes with the way comments need to be written
+  in `tox.ini`
+
 0.6.0 (07.11.2021)
 ------------------
 

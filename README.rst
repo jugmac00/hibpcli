@@ -2,9 +2,6 @@
    :target: https://github.com/jugmac00/hibpcli/actions?workflow=CI
    :alt: CI Status
 
-.. image:: https://coveralls.io/repos/github/jugmac00/hibpcli/badge.svg?branch=master
-  :target: https://coveralls.io/github/jugmac00/hibpcli?branch=master
-
 .. image:: https://img.shields.io/pypi/v/hibpcli.svg
   :target: https://pypi.org/project/hibpcli/
 

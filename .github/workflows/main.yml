@@ -38,12 +38,3 @@ jobs:
 
       - name: "Run tox targets for ${{ matrix.python-version }}"
         run: "python -m tox"
-
-      - name: "Report to coveralls"
-        # coverage is only created in the py39 environment
-        if: "matrix.python-version == '3.9'"
-        run: |
-          pip install coveralls
-          coveralls --service=github
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

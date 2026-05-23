@@ -1,10 +1,9 @@
-import codecs
 import os
 
 from setuptools import find_packages, setup
 
 HERE = os.path.abspath(os.path.dirname(__file__))
-VERSION = "0.7.0"
+VERSION = "0.8.0"
 
 
 def read(*parts):
@@ -16,7 +15,7 @@ def read(*parts):
     Thanks to:
     https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/
     """
-    with codecs.open(os.path.join(HERE, *parts), "rb", "utf-8") as f:
+    with open(os.path.join(HERE, *parts), encoding="utf-8") as f:
         return f.read()
 
 
@@ -30,14 +29,15 @@ setup(
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
         "Development Status :: 4 - Beta",
         "Environment :: Console",
     ],
+    python_requires=">=3.10",
     author="Jürgen Gmach",
     author_email="juergen.gmach@goglemail.com",
     url="https://github.com/jugmac00/hibpcli",

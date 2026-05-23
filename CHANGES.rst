@@ -1,6 +1,17 @@
 CHANGELOG
 =========
 
+0.8.0 (23.05.2026)
+------------------
+
+added
+~~~~~
+- add support for Python 3.12, 3.13 and 3.14
+
+removed
+~~~~~~~
+- remove support for Python 3.7, 3.8, and 3.9 (eol)
+
 0.7.0 (20.12.2022)
 ------------------
 

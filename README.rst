@@ -10,7 +10,7 @@
    :target: https://pypi.org/project/hibpcli/
    :alt: Supported Python versions
 
-.. image:: https://img.shields.io/pypi/l/hibpcli
+.. image:: https://img.shields.io/pypi/l/hibpcli.svg
    :target: https://github.com/jugmac00/hibpcli/blob/master/LICENSE
    :alt: License
 

@@ -65,12 +65,12 @@ run all tests and linters
     tox
 
 
-run tests for Python 3.8 only
+run tests for Python 3.14 only
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code::
 
-    tox -e py38
+    tox -e py314
 
 
 pass through e.g. verbose argument to pytest
@@ -78,7 +78,7 @@ pass through e.g. verbose argument to pytest
 
 .. code::
 
-    tox -e py38 -- -vv
+    tox -e py314 -- -vv
 
 
 generate coverage

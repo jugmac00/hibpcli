@@ -3,13 +3,16 @@
    :alt: CI Status
 
 .. image:: https://img.shields.io/pypi/v/hibpcli.svg
-  :target: https://pypi.org/project/hibpcli/
+    :target: https://pypi.org/project/hibpcli/
+    :alt: PyPI version
 
 .. image:: https://img.shields.io/pypi/pyversions/hibpcli.svg
-  :target: https://pypi.org/project/hibpcli/
+    :target: https://pypi.org/project/hibpcli/
+    :alt: Supported Python versions
 
 .. image:: https://img.shields.io/pypi/l/hibpcli
-  :target: https://github.com/jugmac00/hibpcli/blob/master/LICENSE
+    :target: https://github.com/jugmac00/hibpcli/blob/master/LICENSE
+    :alt: License
 
 
 hibpcli
@@ -66,7 +69,7 @@ run all tests and linters
 
 
 run tests for Python 3.14 only
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code::
 

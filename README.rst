@@ -1,16 +1,18 @@
-.. image:: https://github.com/jugmac00/hibpcli/actions/workflows/ci.yml/badge.svg?branch=master
+|CI| |PyPI version| |Supported Python versions| |License|
+
+.. |CI| image:: https://github.com/jugmac00/hibpcli/actions/workflows/ci.yml/badge.svg?branch=master
    :target: https://github.com/jugmac00/hibpcli/actions/workflows/ci.yml
    :alt: CI Status
 
-.. image:: https://img.shields.io/pypi/v/hibpcli.svg
+.. |PyPI version| image:: https://img.shields.io/pypi/v/hibpcli.svg
    :target: https://pypi.org/project/hibpcli/
    :alt: PyPI version
 
-.. image:: https://img.shields.io/pypi/pyversions/hibpcli.svg
+.. |Supported Python versions| image:: https://img.shields.io/pypi/pyversions/hibpcli.svg
    :target: https://pypi.org/project/hibpcli/
    :alt: Supported Python versions
 
-.. image:: https://img.shields.io/pypi/l/hibpcli.svg
+.. |License| image:: https://img.shields.io/pypi/l/hibpcli.svg
    :target: https://github.com/jugmac00/hibpcli/blob/master/LICENSE
    :alt: License
 

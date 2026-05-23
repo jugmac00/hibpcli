@@ -95,5 +95,5 @@ thank you
 ---------
 
 - click - https://click.palletsprojects.com
-- pykeepass - https://github.com/pschmitt/pykeepass
+- pykeepass - https://github.com/libkeepass/pykeepass
 - httpx - https://github.com/encode/httpx

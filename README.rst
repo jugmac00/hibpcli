@@ -1,14 +1,10 @@
 .. image:: https://github.com/jugmac00/hibpcli/actions/workflows/ci.yml/badge.svg?branch=master
-   :alt: CI Status
 
 .. image:: https://img.shields.io/pypi/v/hibpcli.svg
-   :alt: PyPI version
 
 .. image:: https://img.shields.io/pypi/pyversions/hibpcli.svg
-   :alt: Supported Python versions
 
 .. image:: https://img.shields.io/pypi/l/hibpcli
-   :alt: License
 
 
 hibpcli

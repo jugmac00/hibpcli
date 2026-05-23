@@ -1,4 +1,4 @@
-|CI| |PyPI version| |Supported Python versions| |License|
+|CI|\ |PyPI version|\ |Supported Python versions|\ |License|
 
 .. |CI| image:: https://github.com/jugmac00/hibpcli/actions/workflows/ci.yml/badge.svg?branch=master
    :target: https://github.com/jugmac00/hibpcli/actions/workflows/ci.yml
